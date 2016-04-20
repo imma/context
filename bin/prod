@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+function main {
+  export CONTEXT_PREFIX="${0##*/}-"
+  exec "$@"
+}
+
+source sub "$BASH_SOURCE" "$@"
