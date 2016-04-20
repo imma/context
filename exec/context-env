@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 function main {
-  export CONTEXT_ENV="${0##*/}-"
+  export CONTEXT_ENV="${0##*/}"
   exec "$@"
 }
 

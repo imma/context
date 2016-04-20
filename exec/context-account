@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 function main {
-  export CONTEXT_ACCOUNT="${0##*/}-"
+  export CONTEXT_ACCOUNT="${0##*/}"
   exec "$@"
 }
 
