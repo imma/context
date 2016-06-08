@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
 
 function main {
+  local shome="${_awesome_home:-"$(cd -P -- "${BASH_SOURCE%/*}/.." && pwd -P)"}"
+  source "$shome/script/profile"
+
   export CONTEXT_ENV="${0##*/}"
+  export AWS_PROFILE="${CONTEXT_ORG:+$CONTEXT_ORG-}${CONTEXT_ENV:+$CONTEXT_ENV-}${CONTEXT_REGION}"
   exec "$@"
 }
 
