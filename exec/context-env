@@ -5,7 +5,6 @@ function main {
   source "$shome/script/profile"
 
   export CONTEXT_ENV="${0##*/}"
-  export AWS_PROFILE="${CONTEXT_ORG:+$CONTEXT_ORG-}${CONTEXT_ENV:+$CONTEXT_ENV-}${CONTEXT_REGION}"
   exec "$@"
 }
 
